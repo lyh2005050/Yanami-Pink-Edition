@@ -10,10 +10,10 @@ Komari 服务器监控 Android 客户端（Yanami）的少女风定制版。
 - 📱 基于 Yanami v1.1.0 反编译修改
 
 ## 下载
-[Yanami粉发少女版.apk](./Yanami粉发少女版.apk)
+👉 [前往 Release 页面下载最新版](https://github.com/lyh2005050/Yanami-Pink-Edition/releases)
 
 ## 安装
-1. 卸载旧版 Yanami
+1. **先卸载旧版 Yanami**（签名不同，无法覆盖安装）
 2. 安装本APK
 3. 添加你的 Komari 服务器地址
 
