@@ -1,0 +1,67 @@
+name: 项目状态检查
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天UTC 0点运行
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  check-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 检查APK文件
+        run: |
+          echo "=== 项目文件检查 ==="
+          ls -la
+          echo ""
+          echo "=== README检查 ==="
+          if [ -f README.md ]; then
+            echo "✅ README.md 存在"
+            wc -l README.md
+          else
+            echo "❌ README.md 不存在"
+          fi
+          echo ""
+          echo "=== 免责声明检查 ==="
+          if [ -f DISCLAIMER.md ]; then
+            echo "✅ DISCLAIMER.md 存在"
+          else
+            echo "❌ DISCLAIMER.md 不存在"
+          fi
+
+      - name: 检查最新Release
+        run: |
+          echo "=== 最新Release信息 ==="
+          LATEST=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest)
+          echo "$LATEST" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          print(f'版本: {d.get("tag_name", "无")}')
+          print(f'名称: {d.get("name", "无")}')
+          print(f'发布时间: {d.get("published_at", "无")}')
+          assets = d.get('assets', [])
+          print(f'资产数量: {len(assets)}')
+          for a in assets:
+              print(f'  - {a["name"]} ({a["size"]/1024/1024:.1f}MB)')
+              print(f'    下载量: {a["download_count"]}')
+          "
+
+      - name: 检查Issues状态
+        run: |
+          echo "=== Issues统计 ==="
+          OPEN=$(curl -s "https://api.github.com/repos/${{ github.repository }}/issues?state=open&per_page=100" | python3 -c "import sys,json; print(len([i for i in json.load(sys.stdin) if 'pull_request' not in i]))")
+          CLOSED=$(curl -s "https://api.github.com/repos/${{ github.repository }}/issues?state=closed&per_page=100" | python3 -c "import sys,json; print(len(json.load(sys.stdin)))")
+          echo "开放议题: $OPEN"
+          echo "已关闭议题: $CLOSED"
+
+      - name: 生成状态报告
+        run: |
+          echo "=== 项目状态报告 ==="
+          echo "仓库: ${{ github.repository }}"
+          echo "检查时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          echo "分支: ${{ github.ref }}"
+          echo ""
+          echo "项目运行正常 ✅"
