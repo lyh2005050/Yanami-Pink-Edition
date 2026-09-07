@@ -21,3 +21,6 @@ Komari 服务器监控 Android 客户端（Yanami）的少女风定制版。
 Yanami - Komari Android Client (com.sekusarisu.yanami)
 
 本修改版遵循原项目开源许可证，保留原作者版权声明，仅做界面主题定制。
+
+## ⚠️ 免责声明
+本项目仅供学习交流和个人使用，使用风险自负。详见 [DISCLAIMER.md](./DISCLAIMER.md)。
