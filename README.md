@@ -1,5 +1,12 @@
 # Yanami 粉发少女版
 
+![GitHub release](https://img.shields.io/github/v/release/lyh2005050/Yanami-Pink-Edition)
+![GitHub downloads](https://img.shields.io/github/downloads/lyh2005050/Yanami-Pink-Edition/total)
+![GitHub issues](https://img.shields.io/github/issues/lyh2005050/Yanami-Pink-Edition)
+![GitHub license](https://img.shields.io/badge/license-MIT-blue)
+![Platform](https://img.shields.io/badge/platform-Android-green)
+![Theme](https://img.shields.io/badge/theme-pink-pink)
+
 Komari 服务器监控 Android 客户端（Yanami）的少女风定制版。
 
 ## 特性
@@ -24,3 +31,8 @@ Yanami - Komari Android Client (com.sekusarisu.yanami)
 
 ## ⚠️ 免责声明
 本项目仅供学习交流和个人使用，使用风险自负。详见 [DISCLAIMER.md](./DISCLAIMER.md)。
+
+## 📊 项目统计
+- Release版本数: 自动更新
+- 总下载量: 自动统计
+- 开放议题: 见 Issues 页面
