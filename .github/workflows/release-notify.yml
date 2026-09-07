@@ -1,0 +1,33 @@
+name: Release发布通知
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 发布信息
+        run: |
+          echo "🎉 新版本发布！"
+          echo "版本: ${{ github.event.release.tag_name }}"
+          echo "名称: ${{ github.event.release.name }}"
+          echo "发布者: ${{ github.event.release.author.login }}"
+          echo ""
+          echo "=== 发布说明 ==="
+          echo "${{ github.event.release.body }}"
+          echo ""
+          echo "=== 下载资产 ==="
+          for asset in $(echo '${{ toJson(github.event.release.assets) }}' | python3 -c "import sys,json; [print(a['browser_download_url']) for a in json.load(sys.stdin)]"); do
+            echo "  - $asset"
+          done
+
+      - name: 统计下载量
+        run: |
+          echo "当前Release下载量统计:"
+          TOTAL=0
+          for count in $(echo '${{ toJson(github.event.release.assets) }}' | python3 -c "import sys,json; [print(a['download_count']) for a in json.load(sys.stdin)]"); do
+            TOTAL=$((TOTAL + count))
+          done
+          echo "总下载量: $TOTAL"
