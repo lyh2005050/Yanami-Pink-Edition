@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 原作者仓库
+    url: https://github.com/icylian/Yanami/issues
+    about: 原项目Yanami的Issue追踪（核心功能问题请优先反馈到原作者仓库）
+  - name: Komari服务端
+    url: https://github.com/komari-monitor/komari/issues
+    about: Komari监控服务端的Issue追踪
