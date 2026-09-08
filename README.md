@@ -65,3 +65,31 @@ Yanami 原项目具有以下完整功能，本修改版全部保留：
 - Release版本数: 自动更新
 - 总下载量: 自动统计
 - 开放议题: 见 [Issues](https://github.com/lyh2005050/Yanami-Pink-Edition/issues) 页面
+
+
+## 👥 贡献者与致谢
+
+### 原作者
+- **icylian**（セクサリス）- [GitHub](https://github.com/icylian) | [原项目](https://github.com/icylian/Yanami)
+  - Yanami 原始项目开发者
+  - 邮箱：red4357@gmail.com
+
+### 二次修改
+- **lyh2005050** - [GitHub](https://github.com/lyh2005050)
+  - 粉发少女主题定制版
+  - 基于原作者 v1.1.0 版本二次开发
+
+### 致谢
+感谢原作者 icylian 开发了这么优秀的 Komari 服务器监控客户端 Yanami！
+本项目仅为学习交流使用，完整保留原作者版权信息。
+
+---
+
+## ⚠️ 免责声明
+
+本项目为爱好者二次修改版，基于原作者 [icylian/Yanami](https://github.com/icylian/Yanami) v1.1.0 二次开发，非原作者官方版本。
+
+- 原作者：icylian（セクサリス）
+- 二次修改：lyh2005050
+- 许可证：MIT（保留原作者许可证）
+- 用途：仅为学习交流，请勿用于商业用途
