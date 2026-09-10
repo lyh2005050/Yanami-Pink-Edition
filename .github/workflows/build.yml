@@ -20,6 +20,9 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Add JAVA to PATH
+        run: echo "$JAVA_HOME/bin" >> $GITHUB_PATH
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
