@@ -20,20 +20,26 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Create Keystore
+        run: |
+          keytool -genkeypair -v -keystore yanami.keystore -alias yanami -keyalg RSA -keysize 2048 -validity 10000 -storepass 123456 -keypass 123456 -dname "CN=Yanami Pink, OU=Dev, O=Yanami, L=HK, ST=HK, C=CN"
+
+      - name: Set Env Variables
+        run: |
+          echo "KEYSTORE_FILE=yanami.keystore" >> $GITHUB_ENV
+          echo "KEYSTORE_PASSWORD=123456" >> $GITHUB_ENV
+          echo "KEY_ALIAS=yanami" >> $GITHUB_ENV
+          echo "KEY_PASSWORD=123456" >> $GITHUB_ENV
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
       - name: Build Release APK
         run: ./gradlew assembleRelease --no-daemon
 
-      - name: Sign APK
-        run: |
-          keytool -genkeypair -v -keystore yanami.keystore -alias yanami -keyalg RSA -keysize 2048 -validity 10000 -storepass 123456 -keypass 123456 -dname "CN=Yanami Pink, OU=Dev, O=Yanami, L=HK, ST=HK, C=CN"
-          apksigner sign --ks yanami.keystore --ks-pass pass:123456 --key-pass pass:123456 app/build/outputs/apk/release/app-release-unsigned.apk --out yanami-pink.apk
-
       - name: Upload Release APK
         uses: actions/upload-artifact@v4
         with:
           name: yanami-pink-apk
-          path: yanami-pink.apk
+          path: app/build/outputs/apk/release/app-release.apk
 
