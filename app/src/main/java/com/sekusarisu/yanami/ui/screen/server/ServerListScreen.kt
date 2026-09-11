@@ -11,7 +11,11 @@ import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -130,6 +134,21 @@ class ServerListScreen : Screen {
                     }
                 }
         ) { innerPadding ->
+            // 樱花飘落背景动画
+            Canvas(modifier = Modifier.fillMaxSize()) {
+                val petals = 20
+                val w = size.width
+                val h = size.height
+                for (i in 0 until petals) {
+                    val x = (i * w / petals) + (System.currentTimeMillis() / 20 + i * 50) % w
+                    val y = (System.currentTimeMillis() / 30 + i * h / petals) % h
+                    drawCircle(
+                        color = Color(0xFFFFC0CB).copy(alpha = 0.3f),
+                        radius = 8f,
+                        center = Offset(x, y)
+                    )
+                }
+            }
             when {
                 state.isLoading -> {
                     Box(
