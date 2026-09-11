@@ -1,9 +1,12 @@
-name: Build APK
+name: Build and Release APK
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -26,16 +29,23 @@ jobs:
       - name: Build Release APK
         run: ./gradlew assembleRelease --no-daemon
 
-      - name: List APK files
-        run: ls -la app/build/outputs/apk/release/
-
       - name: Rename APK
-        run: |
-          cp app/build/outputs/apk/release/*.apk yanami-pink.apk
+        run: cp app/build/outputs/apk/release/*.apk yanami-pink.apk
 
-      - name: Upload Release APK
-        uses: actions/upload-artifact@v4
+      - name: Get Version
+        id: version
+        run: echo "v1.0.${{github.run_number}}" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: yanami-pink-apk
-          path: yanami-pink.apk
+          tag_name: ${{ steps.version.outputs.version }}
+          name: Yanami Pink Edition ${{ steps.version.outputs.version }}
+          body: |
+            ## 🌸 Yanami Pink Edition
+            - 强制浅色模式，粉色少女风主题
+            - 新增实时网速、进程数、TCP/UDP连接、GPU、在线天数显示
+            - R8混淆 + 仅arm64架构，体积更小
+            - Debug签名，直接安装即可
+          files: yanami-pink.apk
 
