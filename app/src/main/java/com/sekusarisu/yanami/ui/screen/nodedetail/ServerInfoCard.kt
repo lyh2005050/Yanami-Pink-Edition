@@ -110,9 +110,7 @@ internal fun ServerInfoCard(node: Node) {
                                 "TCP ${node.connections}  UDP ${node.connectionsUdp}"
                         )
                         // GPU
-                        if (node.gpu > 0.0) {
-                            InfoRow("GPU", "%.1f%%".format(node.gpu))
-                        }
+                        InfoRow("GPU", "%.1f%%".format(node.gpu))
                         InfoRow(stringResource(R.string.node_detail_uptime), formatUptime(node.uptime))
                     }
 
@@ -323,4 +321,5 @@ private fun getUsageColor(percent: Double): Color = when {
     percent < 85 -> MaterialTheme.colorScheme.tertiary
     else -> MaterialTheme.colorScheme.error
 }
+
 
