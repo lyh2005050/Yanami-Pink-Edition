@@ -78,11 +78,38 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.version.outputs.name }}-${{ github.run_number }}
-          name: Yanami Pink ${{ steps.version.outputs.name }} (Build #${{ github.run_number }})
+          name: Yanami Pink 粉色少女版 ${{ steps.version.outputs.name }} (Build #${{ github.run_number }})
           draft: false
           prerelease: false
-          generate_release_notes: true
+          body: |
+            🌸 **Yanami Pink 粉色少女风版本** 🌸
+            
+            ## ✨ 本次更新内容：
+            
+            ### 🎨 界面美化
+            - 全新粉色少女风主题
+            - 浅粉色背景，柔和不刺眼
+            - 粉色按钮和交互元素
+            - 强制浅色模式，不跟随系统深色
+            
+            ### 📊 新增监控项
+            - 实时网速显示（上传/下载速度）
+            - 进程数统计
+            - TCP连接数显示
+            - UDP连接数显示
+            - GPU型号显示
+            
+            ### 🛠️ 其他
+            - 基于原作者 icylian/Yanami 1.1.0 修改
+            - 保留原作者全部功能和版权声明
+            - 优化稳定性，修复闪退问题
+            
+            ## 📱 下载说明：
+            - arm64-v8a.apk：现代新手机推荐（64位）
+            - armeabi-v7a.apk：老款32位手机
+            - universal.apk：通用版，全兼容
           files: app/build/outputs/apk/release/Yanami-*.apk
+
 
 
 
