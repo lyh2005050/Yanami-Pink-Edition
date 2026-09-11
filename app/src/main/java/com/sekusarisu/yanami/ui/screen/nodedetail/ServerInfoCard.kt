@@ -104,6 +104,15 @@ internal fun ServerInfoCard(node: Node) {
                         )
                         // 进程数
                         InfoRow("进程数", node.process.toString())
+                        // TCP/UDP连接数
+                        InfoRow(
+                                "连接数",
+                                "TCP ${node.connectionsTcp}  UDP ${node.connectionsUdp}"
+                        )
+                        // GPU型号（如果有的话）
+                        if (node.gpuName.isNotEmpty()) {
+                            InfoRow("GPU", node.gpuName)
+                        }
                         InfoRow(stringResource(R.string.node_detail_uptime), formatUptime(node.uptime))
                     }
 
@@ -314,6 +323,7 @@ private fun getUsageColor(percent: Double): Color = when {
     percent < 85 -> MaterialTheme.colorScheme.tertiary
     else -> MaterialTheme.colorScheme.error
 }
+
 
 
 
