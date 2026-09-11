@@ -41,10 +41,10 @@ enum class ThemeColor(
                             onError = Color(0xFFFFFFFF),
                             errorContainer = Color(0xFFFFDAD6),
                             onErrorContainer = Color(0xFF410002),
-                            background = Color(0xFFFFF5F8),
-                            onBackground = Color(0xFF191C1B),
-                            surface = Color(0xFFFFF5F8),
-                            onSurface = Color(0xFF191C1B),
+                            background = Color(0xFFFFE4EC),
+                            onBackground = Color(0xFF2D1B24),
+                            surface = Color(0xFFFFE4EC),
+                            onSurface = Color(0xFF2D1B24),
                             surfaceVariant = Color(0xFFDAE5E0),
                             onSurfaceVariant = Color(0xFF3F4945),
                             outline = Color(0xFF6F7975),
@@ -624,4 +624,5 @@ enum class ThemeColor(
         fun fromKey(key: String): ThemeColor = entries.find { it.key == key } ?: DYNAMIC
     }
 }
+
 
