@@ -78,12 +78,7 @@ class MainActivity : AppCompatActivity() {
             val prefs by prefsRepo.preferencesFlow.collectAsState(initial = UserPreferences())
 
             val themeColor = ThemeColor.fromKey(prefs.themeColorKey)
-            val darkTheme =
-                    when (prefs.darkModeKey) {
-                        "light" -> false
-                        "dark" -> true
-                        else -> isSystemInDarkTheme()
-                    }
+            val darkTheme = false // 强制浅色模式
 
             // 解析初始导航栈
             var initialScreens by remember { mutableStateOf<List<Screen>?>(null) }
@@ -280,3 +275,4 @@ private fun MainNavigationRail(
         Spacer(modifier = Modifier.weight(1f))
     }
 }
+

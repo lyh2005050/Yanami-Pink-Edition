@@ -17,17 +17,17 @@ enum class ThemeColor(
         val darkScheme: ColorScheme?
 ) {
     /** 动态壁纸取色（Android 12+） */
-    DYNAMIC(key = "dynamic", seedColor = Color(0xFF006B5E), lightScheme = null, darkScheme = null),
+    DYNAMIC(key = "dynamic", seedColor = Color(0xFFEC407A), lightScheme = null, darkScheme = null),
 
     /** 青绿 — 默认 */
     TEAL(
             key = "teal",
-            seedColor = Color(0xFF006B5E),
+            seedColor = Color(0xFFEC407A),
             lightScheme =
                     lightColorScheme(
-                            primary = Color(0xFF006B5E),
+                            primary = Color(0xFFEC407A),
                             onPrimary = Color(0xFFFFFFFF),
-                            primaryContainer = Color(0xFF7AF7E0),
+                            primaryContainer = Color(0xFFFFD6E0),
                             onPrimaryContainer = Color(0xFF00201B),
                             secondary = Color(0xFF4A635D),
                             onSecondary = Color(0xFFFFFFFF),
@@ -41,9 +41,9 @@ enum class ThemeColor(
                             onError = Color(0xFFFFFFFF),
                             errorContainer = Color(0xFFFFDAD6),
                             onErrorContainer = Color(0xFF410002),
-                            background = Color(0xFFFAFDFA),
+                            background = Color(0xFFFFF5F8),
                             onBackground = Color(0xFF191C1B),
-                            surface = Color(0xFFFAFDFA),
+                            surface = Color(0xFFFFF5F8),
                             onSurface = Color(0xFF191C1B),
                             surfaceVariant = Color(0xFFDAE5E0),
                             onSurfaceVariant = Color(0xFF3F4945),
@@ -624,3 +624,4 @@ enum class ThemeColor(
         fun fromKey(key: String): ThemeColor = entries.find { it.key == key } ?: DYNAMIC
     }
 }
+
