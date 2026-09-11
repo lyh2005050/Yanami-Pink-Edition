@@ -22,6 +22,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -67,7 +68,26 @@ internal fun NodeDetailContent(
             }
 
             if (loadIsLoading) {
-                item {
+                // 我们加的：原作者藏着的详细监控信息
+            item {
+                Card(modifier = Modifier.fillMaxWidth().padding(8.dp)) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(text = "📊 详细监控（二改版新增）", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+                        Spacer(modifier = Modifier.height(8.dp))
+                        val node = state.node!!
+                        Text(text = "⏱️ 已在线: ${node.uptime / 86400} 天 ${(node.uptime % 86400) / 3600} 小时")
+                        Text(text = "🔢 进程数: ${node.process}")
+                        Text(text = "🔌 TCP连接: ${node.connectionsTcp}  UDP连接: ${node.connectionsUdp}")
+                        if (node.gpuName.isNotBlank()) {
+                            Text(text = "🎮 GPU: ${node.gpuName}")
+                        }
+                        Text(text = "📶 实时网速:  ↓ ${node.netIn / 1024} KB/s  ↑ ${node.netOut / 1024} KB/s")
+                        Text(text = "💾 总流量:  ↑ ${node.netTotalUp / 1024 / 1024 / 1024} GB  ↓ ${node.netTotalDown / 1024 / 1024 / 1024} GB")
+                        Text(text = "⚙️ 系统负载: ${node.load1} / ${node.load5} / ${node.load15}")
+                    }
+                }
+            }
+            item {
                     ChartSectionSurface {
                         Box(
                                 modifier = Modifier.fillMaxWidth().height(200.dp),
@@ -228,7 +248,26 @@ internal fun NodeDetailContent(
             }
 
             if (state.isPingRecordsLoading) {
-                item {
+                // 我们加的：原作者藏着的详细监控信息
+            item {
+                Card(modifier = Modifier.fillMaxWidth().padding(8.dp)) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(text = "📊 详细监控（二改版新增）", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+                        Spacer(modifier = Modifier.height(8.dp))
+                        val node = state.node!!
+                        Text(text = "⏱️ 已在线: ${node.uptime / 86400} 天 ${(node.uptime % 86400) / 3600} 小时")
+                        Text(text = "🔢 进程数: ${node.process}")
+                        Text(text = "🔌 TCP连接: ${node.connectionsTcp}  UDP连接: ${node.connectionsUdp}")
+                        if (node.gpuName.isNotBlank()) {
+                            Text(text = "🎮 GPU: ${node.gpuName}")
+                        }
+                        Text(text = "📶 实时网速:  ↓ ${node.netIn / 1024} KB/s  ↑ ${node.netOut / 1024} KB/s")
+                        Text(text = "💾 总流量:  ↑ ${node.netTotalUp / 1024 / 1024 / 1024} GB  ↓ ${node.netTotalDown / 1024 / 1024 / 1024} GB")
+                        Text(text = "⚙️ 系统负载: ${node.load1} / ${node.load5} / ${node.load15}")
+                    }
+                }
+            }
+            item {
                     ChartSectionSurface {
                         Box(
                                 modifier = Modifier.fillMaxWidth().height(200.dp),
