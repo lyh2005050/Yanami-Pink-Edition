@@ -22,24 +22,17 @@ fun YanamiTheme(
         darkTheme: Boolean = isSystemInDarkTheme(),
         content: @Composable () -> Unit
 ) {
+        // 强制锁死粉色主题，忽略用户选择
+        val lockedThemeColor = ThemeColor.TEAL
+        val lockedDarkTheme = false // 强制浅色模式
         val colorScheme =
                 when {
-                        themeColor == ThemeColor.DYNAMIC &&
-                                Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-                                val context = LocalContext.current
-                                if (darkTheme) dynamicDarkColorScheme(context)
-                                else dynamicLightColorScheme(context)
-                        }
-                        themeColor == ThemeColor.DYNAMIC -> {
-                                // 低版本不支持动态取色，回退到 Teal
-                                if (darkTheme) ThemeColor.TEAL.darkScheme!!
-                                else ThemeColor.TEAL.lightScheme!!
-                        }
                         else -> {
-                                if (darkTheme) themeColor.darkScheme!! else themeColor.lightScheme!!
+                                if (lockedDarkTheme) lockedThemeColor.darkScheme!! else lockedThemeColor.lightScheme!!
                         }
                 }
 
         MaterialTheme(colorScheme = colorScheme, typography = YanamiTypography, content = content)
 }
+
 
