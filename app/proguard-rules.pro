@@ -1,21 +1,35 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# 保留源文件和行号信息，方便调试
+-keepattributes SourceFile,LineNumberTable
+-keepattributes Signature
+-keepattributes *Annotation*
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# 保留所有数据模型类（被序列化/反序列化用到）
+-keep class com.sekusarisu.yanami.domain.model.** { *; }
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# 保留所有ViewModel
+-keep class com.sekusarisu.yanami.**.*ViewModel { *; }
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# 保留所有Screen类（Voyager导航用到）
+-keep class com.sekusarisu.yanami.ui.screen.** { *; }
+
+# 保留Kotlin元数据
+-keepclassmembers class ** {
+    @kotlin.Metadata <methods>;
+}
+
+# 保留Compose相关
+-keepclassmembers class ** {
+    @androidx.compose.runtime.Composable <methods>;
+}
+
+# 保留所有Parcelable实现
+-keep class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# 保留枚举
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
