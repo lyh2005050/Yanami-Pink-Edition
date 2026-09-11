@@ -3,11 +3,11 @@
 
     <!-- 通用 -->
     <string name="action_back">返回</string>
-    <string name="action_cancel">取消</string>
+    <string name="action_cancel">加上喵</string>
     <string name="action_confirm">确认</string>
     <string name="action_delete">删除</string>
     <string name="action_edit">修改</string>
-    <string name="action_save">保存</string>
+    <string name="action_save">保存啦</string>
     <string name="action_retry">重试</string>
     <string name="action_search">搜索</string>
     <string name="action_settings">设置</string>
@@ -367,3 +367,4 @@
     <string name="widget_interval_3h">3 小时</string>
     <string name="widget_confirm">确认</string>
 </resources>
+
