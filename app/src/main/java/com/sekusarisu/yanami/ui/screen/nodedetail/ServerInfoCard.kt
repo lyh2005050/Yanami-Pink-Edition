@@ -97,6 +97,26 @@ internal fun ServerInfoCard(node: Node) {
                                 stringResource(R.string.node_detail_net_traffic),
                                 "↑ ${formatBytes(node.netTotalUp)}  ↓ ${formatBytes(node.netTotalDown)}"
                         )
+                        // 新增监控项
+                        InfoRow(
+                                "实时网速",
+                                "↑ ${formatBytes(node.netOut)}/s  ↓ ${formatBytes(node.netIn)}/s"
+                        )
+                        InfoRow(
+                                "进程数",
+                                "${node.process}"
+                        )
+                        InfoRow(
+                                "TCP/UDP连接",
+                                "${node.connectionsTcp} / ${node.connectionsUdp}"
+                        )
+                        if (node.gpuName.isNotBlank()) {
+                            InfoRow("GPU", node.gpuName)
+                        }
+                        InfoRow(
+                                "在线天数",
+                                "${node.uptime / 86400} 天"
+                        )
                         InfoRow(stringResource(R.string.node_detail_uptime), formatUptime(node.uptime))
                     }
 
@@ -214,6 +234,26 @@ internal fun ServerInfoCard(node: Node) {
                         stringResource(R.string.node_detail_load),
                         "%.2f / %.2f / %.2f".format(node.load1, node.load5, node.load15)
                 )
+                        // 新增监控项
+                        InfoRow(
+                                "实时网速",
+                                "↑ ${formatBytes(node.netOut)}/s  ↓ ${formatBytes(node.netIn)}/s"
+                        )
+                        InfoRow(
+                                "进程数",
+                                "${node.process}"
+                        )
+                        InfoRow(
+                                "TCP/UDP连接",
+                                "${node.connectionsTcp} / ${node.connectionsUdp}"
+                        )
+                        if (node.gpuName.isNotBlank()) {
+                            InfoRow("GPU", node.gpuName)
+                        }
+                        InfoRow(
+                                "在线天数",
+                                "${node.uptime / 86400} 天"
+                        )
                 InfoRow(stringResource(R.string.node_detail_uptime), formatUptime(node.uptime))
             }
         }
