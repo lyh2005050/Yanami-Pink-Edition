@@ -43,7 +43,7 @@ enum class ThemeColor(
                             onErrorContainer = Color(0xFF410002),
                             background = Color(0xFFFFF0F5),
                             onBackground = Color(0xFF2D1B24),
-                            surface = Color(0xFFFFFFFF),
+                            surface = Color(0xFFFFF0F5),
                             onSurface = Color(0xFF2D1B24),
                             surfaceVariant = Color(0xFFDAE5E0),
                             onSurfaceVariant = Color(0xFF3F4945),
@@ -624,6 +624,7 @@ enum class ThemeColor(
         fun fromKey(key: String): ThemeColor = entries.find { it.key == key } ?: TEAL
     }
 }
+
 
 
 
