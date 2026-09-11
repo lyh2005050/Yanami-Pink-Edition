@@ -6,6 +6,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.sekusarisu.yanami.R
 
 // 站酷小薇体，少女风
 val ZcoolXiaoWei = FontFamily(
@@ -135,6 +136,7 @@ val YanamiTypography =
                                 letterSpacing = 0.5.sp
                         )
         )
+
 
 
 
