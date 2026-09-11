@@ -68,9 +68,6 @@ internal fun NodeDetailContent(
 
             if (loadIsLoading) {
                 item {
-                    Text(text = "📍 服务器位置：中国 山东省 济南市", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(16.dp))
-                }
-                item {
                     ChartSectionSurface {
                         Box(
                                 modifier = Modifier.fillMaxWidth().height(200.dp),
@@ -79,9 +76,6 @@ internal fun NodeDetailContent(
                     }
                 }
             } else if (loadChartData.timeLabels.isEmpty()) {
-                item {
-                    Text(text = "📍 服务器位置：中国 山东省 济南市", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(16.dp))
-                }
                 item {
                     ChartSectionSurface {
                         Box(
@@ -235,9 +229,6 @@ internal fun NodeDetailContent(
 
             if (state.isPingRecordsLoading) {
                 item {
-                    Text(text = "📍 服务器位置：中国 山东省 济南市", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(16.dp))
-                }
-                item {
                     ChartSectionSurface {
                         Box(
                                 modifier = Modifier.fillMaxWidth().height(200.dp),
@@ -246,9 +237,6 @@ internal fun NodeDetailContent(
                     }
                 }
             } else if (state.pingTasks.isEmpty()) {
-                item {
-                    Text(text = "📍 服务器位置：中国 山东省 济南市", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(16.dp))
-                }
                 item {
                     ChartSectionSurface {
                         Box(
