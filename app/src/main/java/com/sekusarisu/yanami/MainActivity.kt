@@ -133,7 +133,7 @@ class MainActivity : AppCompatActivity() {
                 updateCheckService.checkForUpdateSilent(versionCode)
             }
 
-            YanamiTheme(themeColor = themeColor, darkTheme = darkTheme) {
+            YanamiTheme(themeColor = themeColor) {
                 val currentDensity = LocalDensity.current
                 val adjustedDensity = Density(
                         density = currentDensity.density,

@@ -61,7 +61,7 @@ private val previewSnippets =
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun SshTerminalScreenPreview() {
-    YanamiTheme(themeColor = ThemeColor.TEAL, darkTheme = true) {
+    YanamiTheme(themeColor = ThemeColor.TEAL) {
         Scaffold(
                 contentWindowInsets = WindowInsets(0, 0, 0, 0),
                 topBar = {
@@ -210,7 +210,7 @@ private fun SshTerminalScreenPreview() {
 @Preview(name = "Snippet Editor", showBackground = true, widthDp = 412, heightDp = 917)
 @Composable
 private fun SshTerminalSnippetEditorPreview() {
-    YanamiTheme(themeColor = ThemeColor.TEAL, darkTheme = true) {
+    YanamiTheme(themeColor = ThemeColor.TEAL) {
         Box(
                 modifier =
                         Modifier.fillMaxSize()

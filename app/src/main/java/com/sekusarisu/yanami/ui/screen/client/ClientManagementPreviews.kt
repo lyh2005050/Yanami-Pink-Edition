@@ -39,7 +39,7 @@ import com.sekusarisu.yanami.ui.theme.YanamiTheme
 @Preview(showBackground = true)
 @Composable
 private fun ClientCardPreviewUnmasked() {
-    YanamiTheme(themeColor = ThemeColor.BLUE_MTB, darkTheme = true) {
+    YanamiTheme(themeColor = ThemeColor.BLUE_MTB) {
         ClientCard(
                 client = previewManagedClient(),
                 maskIpAddress = false,
@@ -58,7 +58,7 @@ private fun ClientCardPreviewUnmasked() {
 @Preview(showBackground = true)
 @Composable
 private fun ClientCardPreviewMasked() {
-    YanamiTheme(themeColor = ThemeColor.BLUE_MTB, darkTheme = true) {
+    YanamiTheme(themeColor = ThemeColor.BLUE_MTB) {
         ClientCard(
                 client = previewManagedClient(hidden = true),
                 maskIpAddress = true,
@@ -77,7 +77,7 @@ private fun ClientCardPreviewMasked() {
 @Preview(showBackground = true)
 @Composable
 private fun SortModeClientCardPreview() {
-    YanamiTheme(themeColor = ThemeColor.BLUE_MTB, darkTheme = true) {
+    YanamiTheme(themeColor = ThemeColor.BLUE_MTB) {
         SortModeClientCard(client = previewManagedClient(hidden = true), isDragging = false)
     }
 }
@@ -85,7 +85,7 @@ private fun SortModeClientCardPreview() {
 @Preview(name = "Install Command Dialog", showBackground = true, widthDp = 420, heightDp = 900)
 @Composable
 private fun InstallCommandDialogPreview() {
-    YanamiTheme(themeColor = ThemeColor.BLUE_MTB, darkTheme = true) {
+    YanamiTheme(themeColor = ThemeColor.BLUE_MTB) {
         InstallCommandDialog(
                 client = previewManagedClient(),
                 serverBaseUrl = "https://komari.example.com/admin",
@@ -98,7 +98,7 @@ private fun InstallCommandDialogPreview() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ClientManagementContentPreview() {
-    YanamiTheme(themeColor = ThemeColor.BLUE_MTB, darkTheme = true) {
+    YanamiTheme(themeColor = ThemeColor.BLUE_MTB) {
         Scaffold(
                 topBar = {
                     TopAppBar(
@@ -175,7 +175,7 @@ private fun ClientManagementContentPreview() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ClientManagementSortModePreview() {
-    YanamiTheme(themeColor = ThemeColor.BLUE_MTB, darkTheme = true) {
+    YanamiTheme(themeColor = ThemeColor.BLUE_MTB) {
         Scaffold(
                 topBar = {
                     TopAppBar(

@@ -86,7 +86,7 @@ private fun StateContentPreview() {
 @Preview(name = "NodeList Tablet", showBackground = true, widthDp = 1280, heightDp = 900)
 @Composable
 private fun NodeListTabletPreview() {
-    YanamiTheme(themeColor = ThemeColor.BLUE_MTB, darkTheme = true) {
+    YanamiTheme(themeColor = ThemeColor.BLUE_MTB) {
         Surface(color = MaterialTheme.colorScheme.background) {
             Row(modifier = Modifier.fillMaxSize()) {
                 NodeListTabletPreviewRail()
