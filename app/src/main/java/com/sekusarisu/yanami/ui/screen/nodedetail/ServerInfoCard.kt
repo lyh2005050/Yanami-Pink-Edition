@@ -114,10 +114,6 @@ internal fun ServerInfoCard(node: Node) {
                             InfoRow("GPU", node.gpuName)
                         }
                         InfoRow(
-                InfoRow(
-                        "延迟",
-                        "-- ms"
-                )
                                 "在线天数",
                                 "${node.uptime / 86400} 天"
                         )
@@ -255,10 +251,6 @@ internal fun ServerInfoCard(node: Node) {
                             InfoRow("GPU", node.gpuName)
                         }
                         InfoRow(
-                InfoRow(
-                        "延迟",
-                        "-- ms"
-                )
                                 "在线天数",
                                 "${node.uptime / 86400} 天"
                         )
