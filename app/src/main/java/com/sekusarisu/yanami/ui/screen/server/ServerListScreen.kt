@@ -284,10 +284,19 @@ private fun ServerCard(
                 )
             }
             if (server.isActive) {
+                val infiniteTransition = rememberInfiniteTransition()
+                val alpha by infiniteTransition.animateFloat(
+                        initialValue = 0.4f,
+                        targetValue = 1f,
+                        animationSpec = infiniteRepeatable(
+                                animation = tween(1000, easing = LinearEasing),
+                                repeatMode = RepeatMode.Reverse
+                        )
+                )
                 Icon(
                         imageVector = Icons.Default.CheckCircle,
                         contentDescription = stringResource(R.string.server_active_badge),
-                        tint = MaterialTheme.colorScheme.primary,
+                        tint = MaterialTheme.colorScheme.primary.copy(alpha = alpha),
                         modifier = Modifier.size(24.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
