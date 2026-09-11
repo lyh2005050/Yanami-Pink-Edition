@@ -33,10 +33,10 @@ enum class ThemeColor(
                             onSecondary = Color(0xFFFFFFFF),
                             secondaryContainer = Color(0xFFFFD6E0),
                             onSecondaryContainer = Color(0xFF880E4F),
-                            tertiary = Color(0xFF436278),
+                            tertiary = Color(0xFFEC407A),
                             onTertiary = Color(0xFFFFFFFF),
-                            tertiaryContainer = Color(0xFFC8E6FF),
-                            onTertiaryContainer = Color(0xFF001E30),
+                            tertiaryContainer = Color(0xFFFFD6E0),
+                            onTertiaryContainer = Color(0xFF880E4F),
                             error = Color(0xFFBA1A1A),
                             onError = Color(0xFFFFFFFF),
                             errorContainer = Color(0xFFFFDAD6),
@@ -624,6 +624,7 @@ enum class ThemeColor(
         fun fromKey(key: String): ThemeColor = entries.find { it.key == key } ?: TEAL
     }
 }
+
 
 
 
