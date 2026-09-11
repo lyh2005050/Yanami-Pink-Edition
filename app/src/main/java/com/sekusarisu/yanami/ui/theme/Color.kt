@@ -45,7 +45,7 @@ enum class ThemeColor(
                             onBackground = Color(0xFF2D1B24),
                             surface = Color(0xFFFFE4EC),
                             onSurface = Color(0xFF2D1B24),
-                            surfaceVariant = Color(0xFFDAE5E0),
+                            surfaceVariant = Color(0xFFFFD6E0),
                             onSurfaceVariant = Color(0xFF3F4945),
                             outline = Color(0xFF6F7975),
                             outlineVariant = Color(0xFFBEC9C4),
@@ -59,11 +59,11 @@ enum class ThemeColor(
                             secondary = Color(0xFFB1CCC4),
                             onSecondary = Color(0xFF1D352F),
                             secondaryContainer = Color(0xFF334B46),
-                            onSecondaryContainer = Color(0xFFCDE8E0),
+                            onSecondaryContainer = Color(0xFFFFD6E0),
                             tertiary = Color(0xFFAACBE3),
                             onTertiary = Color(0xFF113447),
                             tertiaryContainer = Color(0xFF2B4A5F),
-                            onTertiaryContainer = Color(0xFFC8E6FF),
+                            onTertiaryContainer = Color(0xFFFFD6E0),
                             error = Color(0xFFFFB4AB),
                             onError = Color(0xFF690005),
                             errorContainer = Color(0xFF93000A),
@@ -624,6 +624,7 @@ enum class ThemeColor(
         fun fromKey(key: String): ThemeColor = entries.find { it.key == key } ?: TEAL
     }
 }
+
 
 
 
