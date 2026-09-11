@@ -103,6 +103,13 @@ class AboutScreen : Screen {
                 LazyColumn(modifier = Modifier.fillMaxSize()) {
                     item {
                         AboutItem(
+                                icon = Icons.Default.Info,
+                                title = "🌸 Yanami Pink Edition",
+                                subtitle = "粉色少女风二改版 · 基于原作者 icylian/Yanami"
+                        )
+                    }
+                    item {
+                        AboutItem(
                                 icon = Icons.Default.Code,
                                 title = stringResource(R.string.about_github),
                                 subtitle = stringResource(R.string.about_github_desc),
@@ -257,3 +264,4 @@ private fun AboutItemWithLoading(
         }
     }
 }
+
