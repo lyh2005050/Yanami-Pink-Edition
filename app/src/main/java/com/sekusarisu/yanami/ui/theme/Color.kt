@@ -17,33 +17,33 @@ enum class ThemeColor(
         val darkScheme: ColorScheme?
 ) {
     /** 动态壁纸取色（Android 12+） */
-    DYNAMIC(key = "dynamic", seedColor = Color(0xFFEC407A), lightScheme = null, darkScheme = null),
+    DYNAMIC(key = "dynamic", seedColor = Color(0xFFFF1493), lightScheme = null, darkScheme = null),
 
     /** 青绿 — 默认 */
     TEAL(
             key = "teal",
-            seedColor = Color(0xFFEC407A),
+            seedColor = Color(0xFFFF1493),
             lightScheme =
                     lightColorScheme(
-                            primary = Color(0xFFEC407A),
+                            primary = Color(0xFFFF1493),
                             onPrimary = Color(0xFFFFFFFF),
                             primaryContainer = Color(0xFFFFC1E0),
-                            onPrimaryContainer = Color(0xFF880E4F),
-                            secondary = Color(0xFFEC407A),
+                            onPrimaryContainer = Color(0xFF99004C),
+                            secondary = Color(0xFFFF1493),
                             onSecondary = Color(0xFFFFFFFF),
                             secondaryContainer = Color(0xFFFFC1E0),
-                            onSecondaryContainer = Color(0xFF880E4F),
-                            tertiary = Color(0xFFEC407A),
+                            onSecondaryContainer = Color(0xFF99004C),
+                            tertiary = Color(0xFFFF1493),
                             onTertiary = Color(0xFFFFFFFF),
                             tertiaryContainer = Color(0xFFFFC1E0),
-                            onTertiaryContainer = Color(0xFF880E4F),
+                            onTertiaryContainer = Color(0xFF99004C),
                             error = Color(0xFFBA1A1A),
                             onError = Color(0xFFFFFFFF),
                             errorContainer = Color(0xFFFFDAD6),
                             onErrorContainer = Color(0xFF410002),
-                            background = Color(0xFFFFF0F5),
+                            background = Color(0xFFFFE4EC),
                             onBackground = Color(0xFF2D1B24),
-                            surface = Color(0xFFFFF0F5),
+                            surface = Color(0xFFFFE4EC),
                             onSurface = Color(0xFF2D1B24),
                             surfaceVariant = Color(0xFFDAE5E0),
                             onSurfaceVariant = Color(0xFF3F4945),
@@ -624,6 +624,7 @@ enum class ThemeColor(
         fun fromKey(key: String): ThemeColor = entries.find { it.key == key } ?: TEAL
     }
 }
+
 
 
 
