@@ -13,7 +13,7 @@ android {
         applicationId = "com.sekusarisu.yanami"
         minSdk = 28
         targetSdk = 36
-        versionCode = 2
+        versionCode = 10
         versionName = "1.1.0-pink"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -140,6 +140,7 @@ dependencies {
     debugImplementation(libs.compose.ui.tooling)
     debugImplementation(libs.compose.ui.test.manifest)
 }
+
 
 
 
