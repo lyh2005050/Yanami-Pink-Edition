@@ -27,25 +27,25 @@ enum class ThemeColor(
                     lightColorScheme(
                             primary = Color(0xFFFF1493),
                             onPrimary = Color(0xFFFFFFFF),
-                            primaryContainer = Color(0xFFFFC1E0),
+                            primaryContainer = Color(0xFFFF8FAB),
                             onPrimaryContainer = Color(0xFF99004C),
                             secondary = Color(0xFFFF1493),
                             onSecondary = Color(0xFFFFFFFF),
-                            secondaryContainer = Color(0xFFFFC1E0),
+                            secondaryContainer = Color(0xFFFF8FAB),
                             onSecondaryContainer = Color(0xFF99004C),
                             tertiary = Color(0xFFFF1493),
                             onTertiary = Color(0xFFFFFFFF),
-                            tertiaryContainer = Color(0xFFFFC1E0),
+                            tertiaryContainer = Color(0xFFFF8FAB),
                             onTertiaryContainer = Color(0xFF99004C),
                             error = Color(0xFFBA1A1A),
                             onError = Color(0xFFFFFFFF),
                             errorContainer = Color(0xFFFFDAD6),
                             onErrorContainer = Color(0xFF410002),
-                            background = Color(0xFFFFE4EC),
+                            background = Color(0xFFFFF0F5),
                             onBackground = Color(0xFF2D1B24),
-                            surface = Color(0xFFFFE4EC),
+                            surface = Color(0xFFFFF0F5),
                             onSurface = Color(0xFF2D1B24),
-                            surfaceVariant = Color(0xFFFFD6E0),
+                            surfaceVariant = Color(0xFFFF8FAB),
                             onSurfaceVariant = Color(0xFF3F4945),
                             outline = Color(0xFF6F7975),
                             outlineVariant = Color(0xFFBEC9C4),
@@ -59,11 +59,11 @@ enum class ThemeColor(
                             secondary = Color(0xFFB1CCC4),
                             onSecondary = Color(0xFF1D352F),
                             secondaryContainer = Color(0xFF334B46),
-                            onSecondaryContainer = Color(0xFFFFD6E0),
+                            onSecondaryContainer = Color(0xFFFF8FAB),
                             tertiary = Color(0xFFAACBE3),
                             onTertiary = Color(0xFF113447),
                             tertiaryContainer = Color(0xFF2B4A5F),
-                            onTertiaryContainer = Color(0xFFFFD6E0),
+                            onTertiaryContainer = Color(0xFFFF8FAB),
                             error = Color(0xFFFFB4AB),
                             onError = Color(0xFF690005),
                             errorContainer = Color(0xFF93000A),
@@ -624,12 +624,3 @@ enum class ThemeColor(
         fun fromKey(key: String): ThemeColor = entries.find { it.key == key } ?: TEAL
     }
 }
-
-
-
-
-
-
-
-
-
