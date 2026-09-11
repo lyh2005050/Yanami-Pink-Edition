@@ -18,7 +18,7 @@ import androidx.compose.ui.platform.LocalContext
  */
 @Composable
 fun YanamiTheme(
-        themeColor: ThemeColor = ThemeColor.DYNAMIC,
+        themeColor: ThemeColor = ThemeColor.TEAL,
         darkTheme: Boolean = isSystemInDarkTheme(),
         content: @Composable () -> Unit
 ) {
@@ -42,3 +42,4 @@ fun YanamiTheme(
 
         MaterialTheme(colorScheme = colorScheme, typography = YanamiTypography, content = content)
 }
+
