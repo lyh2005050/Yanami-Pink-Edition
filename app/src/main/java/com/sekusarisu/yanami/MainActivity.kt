@@ -1,6 +1,8 @@
 package com.sekusarisu.yanami
 
 import android.os.Build
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -73,6 +75,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        // 创建通知渠道
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(
+                "yanami_alerts",
+                "服务器告警",
+                NotificationManager.IMPORTANCE_HIGH
+            ).apply { description = "服务器在线离线提醒" }
+            getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
+        }
 
         setContent {
             val prefs by prefsRepo.preferencesFlow.collectAsState(initial = UserPreferences())
@@ -275,4 +286,3 @@ private fun MainNavigationRail(
         Spacer(modifier = Modifier.weight(1f))
     }
 }
-
