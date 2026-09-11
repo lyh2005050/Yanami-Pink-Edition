@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 
 /** 设置页面 State */
 data class SettingsState(
-        val themeColor: ThemeColor = ThemeColor.DYNAMIC,
+        val themeColor: ThemeColor = ThemeColor.TEAL,
         val darkMode: String = "system",
         val language: String = "system",
         val fontScale: Float = 1.0f,
@@ -185,3 +185,4 @@ class SettingsViewModel(
         AppCompatDelegate.setApplicationLocales(localeList)
     }
 }
+

@@ -621,8 +621,9 @@ enum class ThemeColor(
 
     companion object {
         /** 根据 key 字符串获取对应枚举，找不到则返回 DYNAMIC */
-        fun fromKey(key: String): ThemeColor = entries.find { it.key == key } ?: DYNAMIC
+        fun fromKey(key: String): ThemeColor = entries.find { it.key == key } ?: TEAL
     }
 }
+
 
 
