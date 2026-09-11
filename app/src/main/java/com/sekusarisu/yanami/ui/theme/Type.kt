@@ -2,15 +2,21 @@ package com.sekusarisu.yanami.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+
+// 站酷小薇体，少女风
+val ZcoolXiaoWei = FontFamily(
+    Font(R.font.zcool_xiaowei, FontWeight.Normal)
+)
 
 val YanamiTypography =
         Typography(
                 displayLarge =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 57.sp,
                                 lineHeight = 64.sp,
@@ -18,7 +24,7 @@ val YanamiTypography =
                         ),
                 displayMedium =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 45.sp,
                                 lineHeight = 52.sp,
@@ -26,7 +32,7 @@ val YanamiTypography =
                         ),
                 displaySmall =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 36.sp,
                                 lineHeight = 44.sp,
@@ -34,7 +40,7 @@ val YanamiTypography =
                         ),
                 headlineLarge =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 32.sp,
                                 lineHeight = 40.sp,
@@ -42,7 +48,7 @@ val YanamiTypography =
                         ),
                 headlineMedium =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 28.sp,
                                 lineHeight = 36.sp,
@@ -50,7 +56,7 @@ val YanamiTypography =
                         ),
                 headlineSmall =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 24.sp,
                                 lineHeight = 32.sp,
@@ -58,7 +64,7 @@ val YanamiTypography =
                         ),
                 titleLarge =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Medium,
                                 fontSize = 22.sp,
                                 lineHeight = 28.sp,
@@ -66,7 +72,7 @@ val YanamiTypography =
                         ),
                 titleMedium =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Medium,
                                 fontSize = 16.sp,
                                 lineHeight = 24.sp,
@@ -74,7 +80,7 @@ val YanamiTypography =
                         ),
                 titleSmall =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Medium,
                                 fontSize = 14.sp,
                                 lineHeight = 20.sp,
@@ -82,7 +88,7 @@ val YanamiTypography =
                         ),
                 bodyLarge =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 16.sp,
                                 lineHeight = 24.sp,
@@ -90,7 +96,7 @@ val YanamiTypography =
                         ),
                 bodyMedium =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 14.sp,
                                 lineHeight = 20.sp,
@@ -98,7 +104,7 @@ val YanamiTypography =
                         ),
                 bodySmall =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 12.sp,
                                 lineHeight = 16.sp,
@@ -106,7 +112,7 @@ val YanamiTypography =
                         ),
                 labelLarge =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Medium,
                                 fontSize = 14.sp,
                                 lineHeight = 20.sp,
@@ -114,7 +120,7 @@ val YanamiTypography =
                         ),
                 labelMedium =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Medium,
                                 fontSize = 12.sp,
                                 lineHeight = 16.sp,
@@ -122,10 +128,11 @@ val YanamiTypography =
                         ),
                 labelSmall =
                         TextStyle(
-                                fontFamily = FontFamily.Default,
+                                fontFamily = ZcoolXiaoWei,
                                 fontWeight = FontWeight.Medium,
                                 fontSize = 11.sp,
                                 lineHeight = 16.sp,
                                 letterSpacing = 0.5.sp
                         )
         )
+
