@@ -37,7 +37,12 @@ jobs:
         run: |
           echo "$KEYSTORE_BASE64" | base64 -d > $GITHUB_WORKSPACE/release.jks
 
-      - name: Build release APK
+      - name: Build release APK (自动重试)
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 30
+          max_attempts: 3
+          retry_on: error
         env:
           KEYSTORE_FILE: ${{ github.workspace }}/release.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
