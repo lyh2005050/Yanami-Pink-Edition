@@ -43,14 +43,14 @@ jobs:
           timeout_minutes: 30
           max_attempts: 3
           retry_on: error
+          command: |
+            chmod +x ./gradlew
+            ./gradlew assembleRelease
         env:
           KEYSTORE_FILE: ${{ github.workspace }}/release.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: |
-          chmod +x ./gradlew
-          ./gradlew assembleRelease
 
       - name: Get version name
         id: version
