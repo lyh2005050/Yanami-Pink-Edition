@@ -1,6 +1,6 @@
 {
-    "versionCode": 9,
-    "versionName": "1.1.0",
-    "downloadUrl": "https://github.com/icylian/Yanami/releases/latest",
-    "changelog": "新增配置备份导入导出；对接管理后台的节点管理、延迟监测管理功能；优化架构和性能。"
+    "versionCode": 10,
+    "versionName": "1.1.0-pink",
+    "downloadUrl": "https://github.com/lyh2005050/Yanami-Pink-Edition/releases/latest",
+    "changelog": "🌸 粉色少女风主题：浅粉色背景、粉色按钮与交互元素、强制浅色模式。新增实时网速显示、进程数统计、TCP/UDP连接数、GPU型号显示。基于原作者 icylian/Yanami 1.1.0 修改。"
 }
