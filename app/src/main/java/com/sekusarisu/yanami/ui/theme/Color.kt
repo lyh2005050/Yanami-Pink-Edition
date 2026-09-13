@@ -19,7 +19,7 @@ enum class ThemeColor(
     /** 动态壁纸取色（Android 12+） */
     DYNAMIC(key = "dynamic", seedColor = Color(0xFFFF1493), lightScheme = null, darkScheme = null),
 
-    /** 青绿 — 默认 */
+    /** 青绿 — 默认（粉色版：白卡片 + 亮粉边框 + 粉紫渐变） */
     TEAL(
             key = "teal",
             seedColor = Color(0xFFFF1493),
@@ -27,28 +27,28 @@ enum class ThemeColor(
                     lightColorScheme(
                             primary = Color(0xFFFF1493),
                             onPrimary = Color(0xFFFFFFFF),
-                            primaryContainer = Color(0xFFFF8FAB),
-                            onPrimaryContainer = Color(0xFF99004C),
-                            secondary = Color(0xFFFF1493),
+                            primaryContainer = Color(0xFFFF80AB),
+                            onPrimaryContainer = Color(0xFF880E4F),
+                            secondary = Color(0xFF9C27B0),
                             onSecondary = Color(0xFFFFFFFF),
-                            secondaryContainer = Color(0xFFFF8FAB),
-                            onSecondaryContainer = Color(0xFF99004C),
-                            tertiary = Color(0xFFFF1493),
+                            secondaryContainer = Color(0xFFE1BEE7),
+                            onSecondaryContainer = Color(0xFF4A148C),
+                            tertiary = Color(0xFF7C4DFF),
                             onTertiary = Color(0xFFFFFFFF),
-                            tertiaryContainer = Color(0xFFFF8FAB),
-                            onTertiaryContainer = Color(0xFF99004C),
+                            tertiaryContainer = Color(0xFFD1C4E9),
+                            onTertiaryContainer = Color(0xFF311B92),
                             error = Color(0xFFBA1A1A),
                             onError = Color(0xFFFFFFFF),
                             errorContainer = Color(0xFFFFDAD6),
                             onErrorContainer = Color(0xFF410002),
-                            background = Color(0xFFFF80AB),
+                            background = Color(0xFFFFF0F5),
                             onBackground = Color(0xFF2D1B24),
-                            surface = Color(0xFFFF80AB),
+                            surface = Color(0xFFFFFFFF),
                             onSurface = Color(0xFF2D1B24),
-                            surfaceVariant = Color(0xFFFF8FAB),
-                            onSurfaceVariant = Color(0xFF3F4945),
-                            outline = Color(0xFF6F7975),
-                            outlineVariant = Color(0xFFBEC9C4),
+                            surfaceVariant = Color(0xFFFFF0F5),
+                            onSurfaceVariant = Color(0xFF6B5B66),
+                            outline = Color(0xFFFF4081),
+                            outlineVariant = Color(0xFFFF80AB),
                     ),
             darkScheme =
                     darkColorScheme(
