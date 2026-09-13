@@ -47,8 +47,8 @@ enum class ThemeColor(
                             onSurface = Color(0xFF2D1B24),
                             surfaceVariant = Color(0xFFFF2D8A),
                             onSurfaceVariant = Color(0xFF6B5B66),
-                            outline = Color(0xFFFFFFFF),
-                            outlineVariant = Color(0xFFFFFFFF),
+                            outline = Color(0xFFFF2D8A),
+                            outlineVariant = Color(0xFFFF2D8A),
                     ),
             darkScheme =
                     darkColorScheme(
