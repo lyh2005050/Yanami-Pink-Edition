@@ -25,7 +25,7 @@ enum class ThemeColor(
             seedColor = Color(0xFFFF1493),
             lightScheme =
                     lightColorScheme(
-                            primary = Color(0xFFFF1493),
+                            primary = Color(0xFFFF4081),
                             onPrimary = Color(0xFFFFFFFF),
                             primaryContainer = Color(0xFFFF80AB),
                             onPrimaryContainer = Color(0xFF880E4F),
@@ -41,11 +41,11 @@ enum class ThemeColor(
                             onError = Color(0xFFFFFFFF),
                             errorContainer = Color(0xFFFFDAD6),
                             onErrorContainer = Color(0xFF410002),
-                            background = Color(0xFFFFF0F5),
+                            background = Color(0xFFFFE4EC),
                             onBackground = Color(0xFF2D1B24),
                             surface = Color(0xFFFFFFFF),
                             onSurface = Color(0xFF2D1B24),
-                            surfaceVariant = Color(0xFFFFF0F5),
+                            surfaceVariant = Color(0xFFFFD6E4),
                             onSurfaceVariant = Color(0xFF6B5B66),
                             outline = Color(0xFFFF4081),
                             outlineVariant = Color(0xFFFF80AB),
